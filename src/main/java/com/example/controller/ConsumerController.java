@@ -1,5 +1,6 @@
 package com.example.controller;
 
+import com.example.client.ComputeClient;
 import com.example.service.ConsumerService;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,13 +17,19 @@ public class ConsumerController {
     private final Logger logger = Logger.getLogger(getClass());
 
     @Autowired
-    ConsumerService consumerService;
+    private ConsumerService consumerService;
+
+    @Autowired
+    private ComputeClient computeClient;
 
 
 
     @RequestMapping(value = "/test")
     public String add() {
-        consumerService.add(10,15);
+       // consumerService.add(10,15);
+        //String  result  = computeClient.sub(500L);
+        System.out.println("world");
+        computeClient.sub(1000L);
         return  "success";
     }
 
