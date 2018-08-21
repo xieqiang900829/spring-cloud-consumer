@@ -21,6 +21,14 @@ public interface ComputeClient {
     @GetMapping("/sub/{a}")
     public void  sub(@PathVariable("a")Long a);
 
+    /**
+     * 乘法
+     * @param
+     * @return
+     */
+    @GetMapping("/multi/{a}/{b}")
+    public Long multi(@PathVariable("a")Long a,@PathVariable("b")Long b);
+
 
 
 }

@@ -29,7 +29,8 @@ public class ConsumerController {
        // consumerService.add(10,15);
         //String  result  = computeClient.sub(500L);
         System.out.println("world");
-        computeClient.sub(1000L);
+        Long  result = computeClient.multi(100L,200L);
+        System.out.println("result= "+result);
         return  "success";
     }
 
