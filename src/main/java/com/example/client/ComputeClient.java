@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 /**
  * Created by WD42700 on 2018/8/19.
  */
-@FeignClient(value = "compute-service" )
+@FeignClient(value = "compute-service",path ="/compute" )
 public interface ComputeClient {
     //熔断触发时候的处理、日志的处理
     //@FeignClient(value = "fangjia-fsh-house-service", path = "/house", configuration = FeignConfiguration.class, fallback = HouseRemoteClientHystrix.class)
