@@ -11,13 +11,16 @@ import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboar
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
+
+//为了支持熔断策略。Application启动类添加@EnableCircuitBreaker注解，或换成@SpringCloudApplication
+
 @EnableDiscoveryClient
 @SpringBootApplication
 @EnableFeignClients(basePackages = "com.example.client")
-//@EnableCircuitBreaker
 @EnableHystrix
 @EnableHystrixDashboard
-public class SpringbootdemoApplication {
+@EnableCircuitBreaker
+public class Application {
 
 	@Bean
 	@LoadBalanced
@@ -26,6 +29,6 @@ public class SpringbootdemoApplication {
 	}
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringbootdemoApplication.class, args);
+		SpringApplication.run(Application.class, args);
 	}
 }
