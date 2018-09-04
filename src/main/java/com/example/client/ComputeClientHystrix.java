@@ -16,7 +16,7 @@ public class ComputeClientHystrix   implements  ComputeClient{
      */
     @Override
     public void sub(@PathVariable("a") Long a) {
-
+        System.out.println("ComputeClientHystrix  触发了熔断机制  sub");
     }
 
     /**
@@ -28,7 +28,7 @@ public class ComputeClientHystrix   implements  ComputeClient{
      */
     @Override
     public Long multi(@PathVariable("a") Long a, @PathVariable("b") Long b) {
-        System.out.println("ComputeClientHystrix  触发了熔断机制");
+        System.out.println("ComputeClientHystrix  触发了熔断机制  multi");
         return 9999999L;
     }
 }
