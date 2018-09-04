@@ -39,8 +39,14 @@ public class ConsumerController {
     }
 
 
+    public  static  int  count =0;
+
     @RequestMapping(value = "/sub")
     public String sub() {
+
+        count ++;
+        System.out.println("接口被调用 "+count+"次");
+
         Long  s= computeService.multi(100L,200L);
         return  s+"";
     }
