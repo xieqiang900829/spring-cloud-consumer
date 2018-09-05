@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 @Component
 public class ComputeClientHystrix   implements  ComputeClient{
 
-    public  static  int  count =0;
+
 
     /**
      * 减法
@@ -28,10 +28,12 @@ public class ComputeClientHystrix   implements  ComputeClient{
      * @param b
      * @return
      */
+
+    public  static  int  count =0;
     @Override
     public Long multi(Long a, Long b) {
         count ++;
         System.out.println("ComputeClientHystrix multi  第"+count+"次触发了熔断机制");
-        return 9999999L;
+        return 123456789L;
     }
 }

@@ -22,6 +22,7 @@ import org.springframework.web.client.RestTemplate;
 @EnableCircuitBreaker
 public class Application {
 
+	//开启软均衡负载
 	@Bean
 	@LoadBalanced
 	public RestTemplate restTemplate() {
