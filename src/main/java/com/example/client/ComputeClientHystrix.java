@@ -31,9 +31,9 @@ public class ComputeClientHystrix   implements  ComputeClient{
 
     public  static  int  count =0;
     @Override
-    public Long multi(Long a, Long b) {
+    public String multi(Long a, Long b) {
         count ++;
         System.out.println("ComputeClientHystrix multi  第"+count+"次触发了熔断机制");
-        return 123456789L;
+        return 123456789L+"";
     }
 }

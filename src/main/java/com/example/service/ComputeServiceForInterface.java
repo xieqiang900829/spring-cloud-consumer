@@ -41,7 +41,7 @@ public class ComputeServiceForInterface {
             @HystrixProperty(name = "circuitBreaker.errorThresholdPercentage", value = "1")
             //@HystrixProperty(name = "circuitBreaker.fallbackMethod", value = "fallBackMulti")
     })
-    public Long multi(Long a,Long b){
+    public String multi(Long a,Long b){
 
         return  computeClient.multi(a,b);
 

@@ -28,28 +28,27 @@ public class ConsumerController {
     @Autowired
     private ComputeService computeService;
 
-
-
     @RequestMapping(value = "/multi")
     public String multi() {
         System.out.println("world");
-        Long  result = computeClient.multi(100L,200L);
+        String  result = computeClient.multi(100L,200L);
         System.out.println("result= "+result);
-        return  "success";
+        return  result;
     }
-
 
     public  static  int  count =0;
-
     @RequestMapping(value = "/sub")
     public String sub() {
-
         count ++;
         System.out.println("接口被调用 "+count+"次");
-
-        Long  s= computeService.multi(100L,200L);
-        return  s+"";
+        String  s= computeService.multi(100L,200L);
+        return  s;
     }
 
+    @RequestMapping(value = "/add")
+    public String add() {
+        Long  s= consumerService.multi(100,200);
+        return  s+"";
+    }
 
 }

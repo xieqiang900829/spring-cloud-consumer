@@ -33,7 +33,7 @@ public interface ComputeClient {
      * @return
      */
     @GetMapping("/multi/{a}/{b}")
-    public Long multi(@PathVariable("a")Long a,@PathVariable("b")Long b);
+    public String multi(@PathVariable("a")Long a,@PathVariable("b")Long b);
 
 
 

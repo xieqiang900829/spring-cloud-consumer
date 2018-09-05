@@ -43,7 +43,7 @@ public class ComputeService {
             // 错误百分比，判断熔断的阈值，默认值50，表示在一个统计窗口内有50%的请求处理失败，会触发熔断
             @HystrixProperty(name = "circuitBreaker.errorThresholdPercentage", value = "1")
     })
-    public Long multi(Long a,Long b){
+    public String multi(Long a,Long b){
 
         return  computeClient.multi(a,b);
 
