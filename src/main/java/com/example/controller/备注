@@ -1,0 +1,16 @@
+git仓库中的文件名
+
+springcloud-cousumer-dev.properties
+
+访问 http://localhost:8081/springcloud-cousumer/dev
+
+结果
+
+{   "name":"springcloud-cousumer",
+    "profiles":["dev"],
+    "label":null,
+    "version":"2eec23d4818caaa4ebcd4acaea09e0a460f8001b",
+    "state":null,
+    "propertySources":[{"name":"https://github.com/xieqiang900829/springcloud-config/springcloud-cousumer-dev.properties",
+    "source":{"foo":"foo version 222"}}
+]}

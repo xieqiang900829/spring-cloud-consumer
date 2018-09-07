@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.PathVariable;
  * Created by WD42700 on 2018/8/19.
  */
 
-//fallback  熔断机制：只要调用远程服务失败(微服务响应超时)，就会调用熔断指定的方法。但是在触发熔断之后、继续调用还是会调用server的方法
+//fallback  熔断机制：只要调用远程服务失败(微服务响应超时)，就会调用熔断指定的方法。但是在触发熔断之后、继续调用还是会调用server的方法【这个只能称之为容错、不能叫熔断】
 //@FeignClient(value = "compute-service",path ="/compute" , fallback = ComputeClientHystrix.class)
 
 @FeignClient(value = "compute-service",path ="/compute")
