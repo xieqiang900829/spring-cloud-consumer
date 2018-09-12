@@ -88,6 +88,13 @@
 			<optional>true</optional>
 		</dependency>
 
+		<!--mq-->
+		<dependency>
+			<groupId>com.weidai</groupId>
+			<artifactId>rocketmq-client</artifactId>
+			<version>1.1.7</version>
+		</dependency>
+
 	</dependencies>
 
 	<dependencyManagement>
