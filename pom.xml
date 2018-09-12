@@ -90,9 +90,9 @@
 
 		<!--mq-->
 		<dependency>
-			<groupId>com.weidai</groupId>
+			<groupId>com.alibaba.rocketmq</groupId>
 			<artifactId>rocketmq-client</artifactId>
-			<version>1.1.7</version>
+			<version>3.2.6</version>
 		</dependency>
 
 	</dependencies>
