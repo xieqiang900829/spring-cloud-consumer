@@ -20,13 +20,13 @@ public class ConsumerController {
     private final Logger logger = Logger.getLogger(getClass());
 
     @Autowired
-    private ConsumerService consumerService;
+    private ConsumerService consumerService;  //基于restTemplate
 
     @Autowired
-    private ComputeClient computeClient;
+    private ComputeClient computeClient;  //FeignClient 调用
 
     @Autowired
-    private ComputeService computeService;
+    private ComputeService computeService;  //用于测试熔断  封装了 FeignClient
 
     @RequestMapping(value = "/multi")
     public String multi() {
